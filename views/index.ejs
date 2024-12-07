@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo api</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Quera Web Service</h1>
+
+    <% for(post of posts) { %>
+            <div class="main">
+                <h3 class="user">@<%= post.username %> </h3>
+                <h3 class="cont"><%= post.content %> </h3>
+            </div>
+
+            <br>
+            <a href="http://localhost:8080/posts/<%=post.id%>"> see in details</a>
+        <% } %>
+
+        <br><br><br>
+
+        <button style="margin-left: 47% " ><a class="newPost" href="http://localhost:8080/posts/new" style="text-decoration:none;">New Post</a></button>
+</body>
+</html>
